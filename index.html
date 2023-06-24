@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0 auto;
+            width: 80%;
+            background-color: black;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .navBar{
+            /* background-color: rgba(194, 194, 195, 0.286); */
+            padding: 10px;
+        }
+        .navList{
+            list-style: none;
+            display: flex;
+        }
+        .navItem{
+            font-size:20px;
+            color: rgb(251, 251, 251);
+            padding-right: 40px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .menu{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1em;
+
+        }
+        .menuText{
+            color: rgb(205, 205, 205);
+            font-style: italic;
+            font-size: 60px;
+            padding-left: 20px;
+        }
+        .container{
+            /* margin: 0 auto; */
+            /* padding-top: 20px; */
+            background-color: rgba(63, 62, 62, 0.742);
+            color: wheat;
+            /* height: 100vh; */
+            column-count: 3;
+             column-gap: 40px;
+             column-rule-style: solid;
+             column-rule-width: 5px;
+             column-rule-color: black;
+             height:70vh
+
+        }
+        .menuList{            
+            list-style: none;
+            padding-right: 30px;
+        }
+        .menuItem{
+            padding: 1% 0;
+            padding-right: 30px;
+            font-size: 20px;
+            color:rgb(205, 205, 205);
+        }
+        .subMenu{
+            padding:25px 0px;
+        }
+        .foodList{
+            display: flex;
+            /* flex-wrap: wrap; */
+     
+        }
+        .food{
+            width: 320px;
+            height: 200px;
+            border-radius: 60px 90px;
+            /* border: 1px solid white; */
+            padding: 0 50px;
+        }
+        .home{
+            width:80vw
+        }
+        .foodText{
+            color: white;
+            font-size: 40px;
+            padding-left: 20px;
+        }
+        .foodContainer{
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 20px;
+        }
+        .foodRespList{
+            visibility: hidden;
+            display: none;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        @media only screen and (max-width:1300px) {
+            .foodRespList{
+                visibility: visible;
+                display:block;
+            }
+            
+        }
+        @media only screen and (max-width: 1300px) {
+            .Categories{
+                width: 100%;
+            }
+            .foodItem{
+                visibility: hidden;
+            }
+            .foodList{
+                display: block;
+            }
+            .food{
+                display: block;
+                margin: 0 auto;
+                width: 60vw;
+                height: auto;
+            }    
+       
+        }
+        @media only screen and (max-width: 1500px) {
+            body{
+                width: 100%;
+            }
+            .navList {
+                display: block;
+            }
+            .navItem{
+                padding-bottom: 20px;
+            }
+            .container{
+                display: flex;
+                width: 100%;
+                height: max-content;
+            }
+            /* .foodRespList{
+                visibility: visible;
+                display: none;
+            } */
+            .foodList{
+                width: 100%;
+            }
+            .home{
+                width: 100%;
+            }
+            .foodContainer{
+                width: 90%;
+            }
+        }
+        @media only screen and (min-width: 1500px) {
+            .foodRespList{
+                visibility: visible;
+                display: none;
+            }
+            .foodList{
+                justify-content: space-between;
+            }
+       
+        }
+    </style>
+</head>
+<body>
+    <section class="navBar">
+        <ul class="navList">
+            <a href="#"><li class="navItem">Home</li></a>
+            <a href="#menu"><li class="navItem">Menu</li></a>
+            <a href="#categories"><li class="navItem">Categories</li></a>
+        </ul>
+    </section>
+    <section>
+        <img src="Cherry.jpg" alt="" class="home">
+    </section>
+    <section id="menu">
+        <h1 class="menuText">Menu</h1>
+        <div class="container">
+            <ul class="menuList">
+                <li class="menuItem">
+                    <b>Briyani</b>
+                    <ul>
+                        <a href="#cb"><li class="subMenu">Chicken Briyani.</li></a>
+                        <a href="#mb"><li class="subMenu">Mutton Briyani.</li></a>
+                        <a href="#pb"><li class="subMenu">Prawn Biryani.</li></a>
+                        <a href="#fb"><li class="subMenu">Fish Biryani.</li></a>
+                        <a href="#vb"><li class="subMenu">Vegetable Biryani.</li></a>
+                        <a href="#pnb"><li class="subMenu">Panneer Biryani.</li></a>                        
+                    </ul>
+                </li>
+                <li class="menuItem">
+                    <b>Cake</b>
+                    <ul>
+                        <a href="#bf"><li class="subMenu">Black Forest.</li></a>
+                        <a href="#wf"><li class="subMenu">White Forest.</li></a>
+                        <a href="#rv"><li class="subMenu">Red Velvet.</li></a>
+                        <a href="#ch"><li class="subMenu">Chocolate.</li></a>
+                        <a href="#bc"><li class="subMenu">Birthday Specials.</li></a>
+                        <a href="#wc"><li class="subMenu">Wedding Specials.</li></a>
+                    </ul>
+                </li>
+                <li class="menuItem">
+                    <b>Pizza</b>
+                    <ul>
+                        <a href="#ma"><li class="subMenu">Pizza Margherita.</li></a>
+                        <a href="#cv"><li class="subMenu">Cheesy Vegetable Pizza.</li></a>
+                        <a href="#qp"><li class="subMenu">Quick Tomato Pizza.</li></a>
+                        <a href="#fc"><li class="subMenu">Four Cheese Pizza.</li></a>
+                        <a href="#sp"><li class="subMenu">Sicilian Pizza.</li></a>
+                        <a href="#pe"><li class="subMenu">Pepperoni.</li></a>          
+                    </ul>
+                </li>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <section id="categories">
+        <h1 class="menuText">Categories</h1>
+        <h5 class="foodText">Briyani</h2>
+        <div class="foodList">            
+            <div><img  class="food" id="cb" src="biryani.jpg" alt=""></div>
+            <p class="foodRespList ">Chicken Briyani.</p>
+            <div><img  class="food" id="mb" src="MuttonBriyani.jpg" alt=""></div>
+            <p class="foodRespList ">Mutton Briyani.</p>
+            <div><img  class="food" id="pb" src="prawnBriyani.jpg" alt=""></div>
+            <p class="foodRespList ">Prawn Briyani.</p>
+        </div>
+        <div class="foodContainer">
+                <p class="foodItem ">Chicken Briyani.</p>
+                <p class=" foodItem">Mutton Briyani.</p>
+                <p class=" foodItem">Prawn Briyani.</p>
+        </div>
+        <div class="foodList">            
+            <div><img  class="food" id="fb" src="fish-biryanii.jpg" alt=""></div>
+            <p class="foodRespList ">Fish Briyani.</p>
+            <div><img  class="food" id="vb" src="veg briyani.jpg" alt=""></div>
+            <p class="foodRespList ">Vegatable Briyani.</p>
+            <div><img  class="food" id="pnb" src="Paneer_Biryani_Recipe_1.jpg" alt=""></div>
+            <p class="foodRespList ">Panneer Briyani.</p>
+        </div>
+        <div class="foodContainer">
+                <p class="foodItem ">Fish Briyani.</p>
+                <p class=" foodItem">Vegatable Briyani.</p>
+                <p class=" foodItem">Panneer Briyani.</p>
+        </div>
+        <h5 class="foodText">Cake</h2>
+        <div class="foodList"> 
+            <div><img  class="food" id="bf" src="cake.jpg" alt=""></div>
+            <p class="foodRespList ">Black Forest.</p>
+            <div><img  class="food" id="wf" src="WhiteForest.png" alt=""></div>
+            <p class="foodRespList ">White Forest.</p>
+            <div><img  class="food" id="rv" src="redvelvet.jpg" alt=""></div>
+            <p class="foodRespList ">Red Velvet.</p>
+        </div>
+        <div class="foodContainer">
+            <p class="foodItem ">Black Forest.</p>
+            <p class=" foodItem">White Forest.</p>
+            <p class=" foodItem">Red Velvet.</p>
+        </div>
+        <div class="foodList"> 
+            <div><img  class="food" id="ch" src="Chocolate.avif" alt=""></div>
+            <p class="foodRespList ">Chocolate.</p>
+            <div><img  class="food" id="bc" src="Birthdaycake.jpg" alt=""></div>
+            <p class="foodRespList ">Birthday Specials.</p>
+            <div><img  class="food" id="wc" src="weddingcake.webp" alt=""></div>
+            <p class="foodRespList ">Wedding Specials.</p>
+        </div>
+        <div class="foodContainer">
+            <p class="foodItem ">Chocolate</p>
+            <p class=" foodItem">Birthday Specials.</p>
+            <p class=" foodItem">Wedding Specials.</p>
+        </div>
+        <h5 class="foodText">Pizza</h2>
+        <div class="foodList"> 
+            <div><img  class="food" id="ma" src="margarita.avif" alt=""></div>
+            <p class="foodRespList ">Pizza Margherita.</p>
+            <div><img  class="food" id="cv" src="cheesy veg.webp" alt=""></div>
+            <p class="foodRespList ">Cheesy Vegetable Pizza.</p>
+            <div><img  class="food" id="qp" src="pizza.jpg" alt=""></div>
+            <p class="foodRespList ">Quick Tomato Pizza.</p>
+        </div>
+        <div class="foodContainer">
+            <p class="foodItem ">Pizza Margherita.</p>
+            <p class=" foodItem">Cheesy Vegetable Pizza.</p>
+            <p class=" foodItem">Quick Tomato Pizza.</p>
+        </div>
+        <div class="foodList"> 
+            <div><img  class="food" id="fc" src="fourcheese.avif" alt=""></div>
+            <p class="foodRespList ">Four Cheese Pizza.</p>
+            <div><img  class="food" id="sp" src="sicilianpizza.avif" alt=""></div>
+            <p class="foodRespList ">Sicilian Pizza.</p>
+            <div><img  class="food" id="pe" src="pepporoni.jpg" alt=""></div>
+            <p class="foodRespList ">Pepperoni.</p>
+        </div>
+        <div class="foodContainer">
+            <p class="foodItem ">Four Cheese Pizza.</p>
+            <p class=" foodItem">Sicilian Pizza.</p>
+            <p class=" foodItem">Pepperoni.</p>
+        </div>
+    </section>
+
+</body>
+</html>
